@@ -93,7 +93,7 @@ def main(src_file_name, dst_file_name, output_limit_amount):
     final_content = []
 
     # extract top articles only
-    top_articles = itertools.islice(article_counts.items(), output_limit_amount)
+    top_articles = itertools.islice(article_counts.items(), int(output_limit_amount))
     for article_url, count in top_articles:
         final_content.append([unique_articles[article_url], article_url, count])
 
